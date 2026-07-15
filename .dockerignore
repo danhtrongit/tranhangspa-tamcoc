@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.gitignore
+npm-debug.log*
+Dockerfile
+.dockerignore
+docker-compose*.yml
+.DS_Store
+menu
+.playwright-mcp
+README.md
+*.md
+.env*
