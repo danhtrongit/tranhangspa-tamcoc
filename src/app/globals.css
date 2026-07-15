@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter", system-ui, sans-serif;
+    --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold-200 text-ink;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-ink;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  /* Small gold eyebrow label above section titles */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-widest2 text-gold-600;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after {
+    content: "";
+    @apply h-px w-6 bg-gold-400;
+  }
+
+  .heading-xl {
+    @apply font-serif text-4xl leading-[1.08] text-ink sm:text-5xl md:text-6xl;
+  }
+
+  .heading-lg {
+    @apply font-serif text-3xl leading-[1.12] text-ink sm:text-4xl md:text-[2.75rem];
+  }
+
+  .lead {
+    @apply text-base leading-relaxed text-muted sm:text-lg;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold-600 text-white shadow-goldglow hover:-translate-y-0.5 hover:bg-gold-700;
+  }
+
+  .btn-outline {
+    @apply btn border border-gold-500 bg-transparent text-gold-700 hover:bg-gold-500 hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply btn bg-white/80 text-ink ring-1 ring-line hover:bg-white hover:ring-gold-300;
+  }
+
+  .card {
+    @apply rounded-3xl border border-line bg-white shadow-soft;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-gold-500 after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .container-tight {
+    @apply mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .divider-gold {
+    height: 1px;
+    background-image: theme("backgroundImage.gold-line");
+  }
+
+  /* Reveal-on-scroll: hidden until .is-visible is toggled by IntersectionObserver */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-ken-burns,
+  .animate-float,
+  .animate-fade-up {
+    animation: none !important;
+  }
+}
