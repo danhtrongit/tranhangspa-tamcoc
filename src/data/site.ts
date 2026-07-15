@@ -22,13 +22,12 @@ export const site = {
   },
 
   // Google Maps place (from the shared listing)
-  mapLat: 20.2161556,
-  mapLng: 105.9378512,
-  mapsUrl: "https://maps.app.goo.gl/",
-  mapsDirections:
-    "https://www.google.com/maps/dir/?api=1&destination=20.2161556,105.9378512",
+  mapLat: 20.216160615191892,
+  mapLng: 105.9352762751569,
+  mapsUrl: "https://maps.app.goo.gl/JozFZFBPNy2fC6Ue6",
+  mapsDirections: "https://maps.app.goo.gl/JozFZFBPNy2fC6Ue6",
   mapsEmbed:
-    "https://www.google.com/maps?q=20.2161556,105.9378512&hl=en&z=17&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.9006340672317!2d105.9352762751569!3d20.216160615191892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31367be13991aee7%3A0xb89e07429147db44!2zVHLhuqduIEjhurFuZyBTcGEgTWFzc2FnZSBUYW0gQ-G7kWMoQmVzdCBTcGEgaW4gVGFtIEPhu5FjKSDsiqTtjIwg66eI7IKs7KeA!5e1!3m2!1svi!2s!4v1784102770965!5m2!1svi!2s",
 
   hours: {
     en: "Open daily · 9:00 AM – 10:30 PM",
